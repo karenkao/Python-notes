@@ -99,6 +99,8 @@ learning rate 有很多種策略: 指數衰減、分段常數、polynomial_decay
 
 參考: [Keras learning rate schedules and decay](https://www.pyimagesearch.com/2019/07/22/keras-learning-rate-schedules-and-decay/)
 
-## 摘要- [Learning Rate Schedules and Adaptive Learning Rate Methods for Deep Learning](https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1)
+## 另外一篇 [Learning Rate Schedules and Adaptive Learning Rate Methods for Deep Learning](https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1)
+
+這篇有 source code 可以參考 : https://github.com/sukilau/Ziff-deep-learning/blob/master/3-CIFAR10-lrate/CIFAR10-lrate.ipynb
 
 
