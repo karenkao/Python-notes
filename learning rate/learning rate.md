@@ -103,5 +103,5 @@ learning rate 有很多種策略: 指數衰減、分段常數、polynomial_decay
 
 這篇有 source code 可以參考 : https://github.com/sukilau/Ziff-deep-learning/blob/master/3-CIFAR10-lrate/CIFAR10-lrate.ipynb
 
-也把它 fork 下來: learning rate/Learning Rate Schedule & Adaptive Gradient Descent Algorithm.ipynb
-
+也把它 fork 下來: [learning rate/Learning Rate Schedule & Adaptive Gradient Descent Algorithm.ipynb
+](https://github.com/karenkao/Notes/blob/main/learning%20rate/Learning%20Rate%20Schedule%20%26%20Adaptive%20Gradient%20Descent%20Algorithm.ipynb)
