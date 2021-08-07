@@ -97,5 +97,8 @@ learning rate 有很多種策略: 指數衰減、分段常數、polynomial_decay
 
 總結: 沒有所謂最好的學習率方案，適用於每一種資料每一個模型，因此你需要運行自己的一組實驗，包括改變初始學習率，以確定適當的學習率計劃。我建議你保留一個實驗日誌，詳細說明任何超參數選擇和相關結果，這樣你就可以參考它，並對看起來很有希望的實驗進行雙重調整。
 
+參考: [Keras learning rate schedules and decay](https://www.pyimagesearch.com/2019/07/22/keras-learning-rate-schedules-and-decay/)
 
-[Learning Rate Schedules and Adaptive Learning Rate Methods for Deep Learning](https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1)
+## 摘要- [Learning Rate Schedules and Adaptive Learning Rate Methods for Deep Learning](https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1)
+
+
