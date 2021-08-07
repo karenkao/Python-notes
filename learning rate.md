@@ -28,12 +28,74 @@ learning rate 有很多種策略: 指數衰減、分段常數、polynomial_decay
 
 1. keras中標準的衰減方案（The standard “decay” schedule in Keras）
 
-```
-# 初始化优化器和模型，并编译
-opt = SGD(lr=1e-2, momentum=0.9, decay=1e-2/epochs)
-model = ResNet.build(32, 32, 3, 10, (9, 9, 9),  (64, 64, 128, 256), reg=0.0005)
-model.compile(loss="categorical_crossentropy", optimizer=opt,  metrics=["accuracy"])
-```
+  ```
+  # 初始化优化器和模型，并编译
+  opt = SGD(lr=1e-2, momentum=0.9, decay=1e-2/epochs)
+  model = ResNet.build(32, 32, 3, 10, (9, 9, 9),  (64, 64, 128, 256), reg=0.0005)
+  model.compile(loss="categorical_crossentropy", optimizer=opt,  metrics=["accuracy"])
+  ```
+  這個學習率會跟著每一次的 epoch 更新，這一個範例是keras 附帶的基於時間的一個學習率方案，接下來的學習率方案皆為作者自定義的。
+
+2. keras中階梯型的學習率方案（Step-based learning rate schedules with Keras）
+
+3. keras中的線性和多項式學習率方案 (作者最喜歡的兩個學習率方案)
+
+  ```
+  class PolynomialDecay(LearningRateDecay):
+    def __init__(self, maxEpochs=100, initAlpha=0.01, power=1.0):
+      # 存储最大的epoch数，基本学习率和多项式的幂
+      self.maxEpochs = maxEpochs
+      self.initAlpha = initAlpha
+      self.power = power
+
+    def __call__(self, epoch):
+      # 基于多项式衰减计算得到新的学习率
+      decay = (1 - (epoch / float(self.maxEpochs))) ** self.power
+      alpha = self.initAlpha * decay
+
+      # 返回新的学习率
+      return float(alpha)
+  ```
+
+使用定義的學習率方案，把它放入 callback 之中
+![image](https://user-images.githubusercontent.com/88547312/128590493-94ec297a-7495-40da-a200-dc789f0f15e1.png)
+![image](https://user-images.githubusercontent.com/88547312/128590539-5bf503c4-8e5f-4d5d-8153-e824fcfa0a60.png)
+
+接下來就是這次作者透過不同的學習率計畫的結果了!
+
+1. 實驗1 : 沒有學習率衰減/時間方案
+
+![image](https://user-images.githubusercontent.com/88547312/128590604-7546af1d-0359-44ed-8a0f-96970323a6cc.png)
+
+我們獲得了大約85％的準確度，但正如我們所看到的，驗證loss和準確率停滯在epoch〜15之後並且在100個epoch的剩餘週期內沒有改善。
+
+2. 實驗2 : Keras標準優化器學習率衰減
+
+![image](https://user-images.githubusercontent.com/88547312/128590626-9cc603d4-0712-4fe3-9def-d34c32b94300.png)
+
+這次我們只獲得82％的準確率，這方案明，學習率衰減/方案（調整方案）並不總能改善你的結果！你需要小心使用哪種學習率計劃。
+
+3. 實驗3：階梯型學習率方案結果
+
+![image](https://user-images.githubusercontent.com/88547312/128590658-ee3644e1-46f6-4197-ac4f-cceaf567b91e.png)
+
+訓練/驗證loss減少 + 訓練/驗證準確率提高
+
+4. 實驗4：線性學習率方案結果
+
+![image](https://user-images.githubusercontent.com/88547312/128590687-12ad7558-f3c7-4799-9907-ced7a90cc371.png)
+
+我們現在看到訓練和驗證loss的急劇下降，特別是在大約75個epoch左右; 但請注意，我們的訓練loss明顯快於我們的驗證loss - 我們可能面臨過度擬合的風險。
+
+無論如何，我們現在可以獲得88％的數據準確率，這是迄今為止我們的最佳結果。
+
+5. 實驗5：多項式學習率計劃結果
+
+![image](https://user-images.githubusercontent.com/88547312/128590717-0a7656b2-126c-4806-aec2-e2d5d1774d82.png)
+
+獲得約~86％的準確率
+
+總結: 沒有所謂最好的學習率方案，適用於每一種資料每一個模型，因此你需要運行自己的一組實驗，包括改變初始學習率，以確定適當的學習率計劃。我建議你保留一個實驗日誌，詳細說明任何超參數選擇和相關結果，這樣你就可以參考它，並對看起來很有希望的實驗進行雙重調整。
 
 
 [Learning Rate Schedules and Adaptive Learning Rate Methods for Deep Learning](https://towardsdatascience.com/learning-rate-schedules-and-adaptive-learning-rate-methods-for-deep-learning-2c8f433990d1)
