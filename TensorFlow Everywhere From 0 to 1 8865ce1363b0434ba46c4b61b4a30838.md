@@ -1,5 +1,7 @@
 # TensorFlow Everywhere From 0 to 1
 
+https://youtu.be/50fo4FLWW-c
+
 ## Distrubuted training with tensorflow and keras (Rick- google tensorflow team senior software engineer)
 
 ![Untitled 4](https://user-images.githubusercontent.com/76892468/127743359-b53f1aa5-6f76-45f6-90c3-9c0faacd9d8f.png)
