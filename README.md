@@ -20,3 +20,12 @@
 - [ ] https://www.tensorflow.org/api_docs/python/tf/optimizers?hl=zh-tw
 
 - [ ] tfa.losses.sigmoid_focal_crossentropy 用在極度不平衡資料上: https://www.tensorflow.org/addons/api_docs/python/tfa/losses/sigmoid_focal_crossentropy?hl=zh-tw
+- [ ] SSD　using dice loss https://www.kaggle.com/allanyiin/masked-face-detection
+- [ ] 醫療影像新 net https://mp.weixin.qq.com/s/PobDGcSrGUuRyJkbbogG0A 
+- [ ] 深度學習長尾挑戰 https://mp.weixin.qq.com/s/NctAam0NgXUsC3AumLDnrQ
+- [ ] GrayMixRGB https://www.scitepress.org/Papers/2021/101880/pdf/index.html
+- [ ] 有關 grad cam https://mp.weixin.qq.com/s/9B0QGfgJmPhjuo9OmoSDBg
+- [ ] Pytorch模型結構、訓練過程以及輸出結果的可視化 https://mp.weixin.qq.com/s/8seHM5hfPjt25VkPVne8nw
+- [ ] Layer fusion
+- [ ] SimCLR - A Simple Framework for Contrastive Learning of Visual Representations https://github.com/google-research/simclr
+- [ ] paper with codes https://paperswithcode.com/sota/scene-text-detection-on-msra-td500 https://paperswithcode.com/dataset/msra-td500
