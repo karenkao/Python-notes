@@ -35,5 +35,5 @@ _我比較認為他是暴力法xdd_
 第一次開放一個小塊，第二次就在一個小塊所以在第二輪就有兩個小塊，一直到 k 輪，直到完全解釋 CNN 在圖的分類為止
 ![image](https://user-images.githubusercontent.com/88547312/140945197-5a5c47a4-2ffb-47c4-866e-f3e6b03619d2.png)
 
-
+## 定義"完全解釋 CNN 在圖的分類"
 
