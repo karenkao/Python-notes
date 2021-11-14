@@ -30,4 +30,5 @@
 - [ ] Layer fusion
 - [ ] SimCLR - A Simple Framework for Contrastive Learning of Visual Representations https://github.com/google-research/simclr
 - [ ] paper with codes https://paperswithcode.com/sota/scene-text-detection-on-msra-td500 https://paperswithcode.com/dataset/msra-td500
-- [ ]  https://arxiv.org/abs/2111.06377
+- [ ] bert transformer https://arxiv.org/abs/2111.06377
+
