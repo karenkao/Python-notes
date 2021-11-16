@@ -32,3 +32,7 @@
 - [ ] paper with codes https://paperswithcode.com/sota/scene-text-detection-on-msra-td500 https://paperswithcode.com/dataset/msra-td500
 - [ ] bert transformer https://arxiv.org/abs/2111.06377
 
+# Dataset
+
+- 最大規模的動物姿態數據集，論文：https://openreview.net/forum?id=rH8yliN6C83，AP-10K數據集：https://github.com/AlexTheBad/AP-10K
+
