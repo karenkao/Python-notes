@@ -34,5 +34,5 @@
 
 # Dataset
 
-- 最大規模的動物姿態數據集，論文：https://openreview.net/forum?id=rH8yliN6C83，AP-10K數據集：https://github.com/AlexTheBad/AP-10K
+- 最大規模的動物姿態數據集，論文：https://openreview.net/forum?id=rH8yliN6C83 ，AP-10K數據集：https://github.com/AlexTheBad/AP-10K
 
