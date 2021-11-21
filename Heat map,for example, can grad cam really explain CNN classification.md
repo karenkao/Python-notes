@@ -81,3 +81,9 @@ user 需要在左右兩張有遮擋的圖片選擇哪一個預測的機率比較
 
 一般的熱圖不能夠全面解釋 CNN 模型關注的關鍵點們，因此找了一個新的方式更有道理邏輯的演示模型看哪些關鍵區域，使得模型的分類更有解勢力。而這樣的解釋力更適合用於說服 user。
 
+## Handwritten notes
+
+![image](https://user-images.githubusercontent.com/88547312/142764059-4eaf2a40-bd70-46dc-9bbd-5270f4ca4637.png)
+
+![image](https://user-images.githubusercontent.com/88547312/142764068-74b2cc74-1b21-4a58-829f-c3e5814702e4.png)
+
